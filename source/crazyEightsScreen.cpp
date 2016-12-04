@@ -18,7 +18,7 @@ CrazyEightsScreen::CrazyEightsScreen(const wxString &title,
 
   // card table
   table = new wxImagePanel(rootPanel,
-                           wxT("../resources/pictures/table/cardtableRect.png"),
+                           wxT("../../source/resources/pictures/table/cardtableRect.png"),
                            wxBITMAP_TYPE_PNG, Direction::UP, 760, 480);
 
   // sizers for table
@@ -68,7 +68,7 @@ CrazyEightsScreen::CrazyEightsScreen(const wxString &title,
     playerHandPanels.push_back(new wxPanel(table, wxID_ANY));
     playerInfoPanels.push_back(new wxPanel(rootPanel, wxID_ANY));
     playerImagePanels.push_back(new wxImagePanel(
-        playerInfoPanels[i], wxT("../resources/pictures/player/playerIcon.png"),
+        playerInfoPanels[i], wxT("../../source/resources/pictures/player/playerIcon.png"),
         wxBITMAP_TYPE_PNG, Direction::UP, 55, 55));
     playerNames.push_back(
         new wxStaticText(playerInfoPanels[i], wxID_ANY, players[i]->getName()));
@@ -296,234 +296,234 @@ CardPanel *CrazyEightsScreen::makeCard(wxPanel *parent, Card &card, bool show,
 
 wxString CrazyEightsScreen::findHalfImage(Card &card, bool show) {
   if (!show)
-    return wxT("../resources/pictures/cards/cardBackHalf.png");
+    return wxT("../../source/resources/pictures/cards/cardBackHalf.png");
 
   if (card.getSuit() == Suit::HEARTS) {
     if (card.getRank() == 2)
-      return wxT("../resources/pictures/cards/cardHeart2Half.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart2Half.png");
     else if (card.getRank() == 3)
-      return wxT("../resources/pictures/cards/cardHeart3Half.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart3Half.png");
     else if (card.getRank() == 4)
-      return wxT("../resources/pictures/cards/cardHeart4Half.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart4Half.png");
     else if (card.getRank() == 5)
-      return wxT("../resources/pictures/cards/cardHeart5Half.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart5Half.png");
     else if (card.getRank() == 6)
-      return wxT("../resources/pictures/cards/cardHeart6Half.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart6Half.png");
     else if (card.getRank() == 7)
-      return wxT("../resources/pictures/cards/cardHeart7Half.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart7Half.png");
     else if (card.getRank() == 8)
-      return wxT("../resources/pictures/cards/cardHeart8Half.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart8Half.png");
     else if (card.getRank() == 9)
-      return wxT("../resources/pictures/cards/cardHeart9Half.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart9Half.png");
     else if (card.getRank() == 10)
-      return wxT("../resources/pictures/cards/cardHeart10Half.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart10Half.png");
     else if (card.getRank() == 11)
-      return wxT("../resources/pictures/cards/cardHeartJHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardHeartJHalf.png");
     else if (card.getRank() == 12)
-      return wxT("../resources/pictures/cards/cardHeartQHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardHeartQHalf.png");
     else if (card.getRank() == 13)
-      return wxT("../resources/pictures/cards/cardHeartKHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardHeartKHalf.png");
     else // ace
-      return wxT("../resources/pictures/cards/cardHeartAHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardHeartAHalf.png");
   } else if (card.getSuit() == Suit::SPADES) {
     if (card.getRank() == 2)
-      return wxT("../resources/pictures/cards/cardSpade2Half.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade2Half.png");
     else if (card.getRank() == 3)
-      return wxT("../resources/pictures/cards/cardSpade3Half.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade3Half.png");
     else if (card.getRank() == 4)
-      return wxT("../resources/pictures/cards/cardSpade4Half.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade4Half.png");
     else if (card.getRank() == 5)
-      return wxT("../resources/pictures/cards/cardSpade5Half.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade5Half.png");
     else if (card.getRank() == 6)
-      return wxT("../resources/pictures/cards/cardSpade6Half.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade6Half.png");
     else if (card.getRank() == 7)
-      return wxT("../resources/pictures/cards/cardSpade7Half.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade7Half.png");
     else if (card.getRank() == 8)
-      return wxT("../resources/pictures/cards/cardSpade8Half.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade8Half.png");
     else if (card.getRank() == 9)
-      return wxT("../resources/pictures/cards/cardSpade9Half.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade9Half.png");
     else if (card.getRank() == 10)
-      return wxT("../resources/pictures/cards/cardSpade10Half.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade10Half.png");
     else if (card.getRank() == 11)
-      return wxT("../resources/pictures/cards/cardSpadeJHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardSpadeJHalf.png");
     else if (card.getRank() == 12)
-      return wxT("../resources/pictures/cards/cardSpadeQHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardSpadeQHalf.png");
     else if (card.getRank() == 13)
-      return wxT("../resources/pictures/cards/cardSpadeKHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardSpadeKHalf.png");
     else // ace
-      return wxT("../resources/pictures/cards/cardSpadeAHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardSpadeAHalf.png");
   } else if (card.getSuit() == Suit::DIAMONDS) {
     if (card.getRank() == 2)
-      return wxT("../resources/pictures/cards/cardDiamond2Half.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond2Half.png");
     else if (card.getRank() == 3)
-      return wxT("../resources/pictures/cards/cardDiamond3Half.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond3Half.png");
     else if (card.getRank() == 4)
-      return wxT("../resources/pictures/cards/cardDiamond4Half.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond4Half.png");
     else if (card.getRank() == 5)
-      return wxT("../resources/pictures/cards/cardDiamond5Half.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond5Half.png");
     else if (card.getRank() == 6)
-      return wxT("../resources/pictures/cards/cardDiamond6Half.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond6Half.png");
     else if (card.getRank() == 7)
-      return wxT("../resources/pictures/cards/cardDiamond7Half.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond7Half.png");
     else if (card.getRank() == 8)
-      return wxT("../resources/pictures/cards/cardDiamond8Half.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond8Half.png");
     else if (card.getRank() == 9)
-      return wxT("../resources/pictures/cards/cardDiamond9Half.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond9Half.png");
     else if (card.getRank() == 10)
-      return wxT("../resources/pictures/cards/cardDiamond10Half.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond10Half.png");
     else if (card.getRank() == 11)
-      return wxT("../resources/pictures/cards/cardDiamondJHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamondJHalf.png");
     else if (card.getRank() == 12)
-      return wxT("../resources/pictures/cards/cardDiamondQHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamondQHalf.png");
     else if (card.getRank() == 13)
-      return wxT("../resources/pictures/cards/cardDiamondKHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamondKHalf.png");
     else // ace
-      return wxT("../resources/pictures/cards/cardDiamondAHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamondAHalf.png");
   } else if (card.getSuit() == Suit::CLUBS) {
     if (card.getRank() == 2)
-      return wxT("../resources/pictures/cards/cardClub2Half.png");
+      return wxT("../../source/resources/pictures/cards/cardClub2Half.png");
     else if (card.getRank() == 3)
-      return wxT("../resources/pictures/cards/cardClub3Half.png");
+      return wxT("../../source/resources/pictures/cards/cardClub3Half.png");
     else if (card.getRank() == 4)
-      return wxT("../resources/pictures/cards/cardClub4Half.png");
+      return wxT("../../source/resources/pictures/cards/cardClub4Half.png");
     else if (card.getRank() == 5)
-      return wxT("../resources/pictures/cards/cardClub5Half.png");
+      return wxT("../../source/resources/pictures/cards/cardClub5Half.png");
     else if (card.getRank() == 6)
-      return wxT("../resources/pictures/cards/cardClub6Half.png");
+      return wxT("../../source/resources/pictures/cards/cardClub6Half.png");
     else if (card.getRank() == 7)
-      return wxT("../resources/pictures/cards/cardClub7Half.png");
+      return wxT("../../source/resources/pictures/cards/cardClub7Half.png");
     else if (card.getRank() == 8)
-      return wxT("../resources/pictures/cards/cardClub8Half.png");
+      return wxT("../../source/resources/pictures/cards/cardClub8Half.png");
     else if (card.getRank() == 9)
-      return wxT("../resources/pictures/cards/cardClub9Half.png");
+      return wxT("../../source/resources/pictures/cards/cardClub9Half.png");
     else if (card.getRank() == 10)
-      return wxT("../resources/pictures/cards/cardClub10Half.png");
+      return wxT("../../source/resources/pictures/cards/cardClub10Half.png");
     else if (card.getRank() == 11)
-      return wxT("../resources/pictures/cards/cardClubJHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardClubJHalf.png");
     else if (card.getRank() == 12)
-      return wxT("../resources/pictures/cards/cardClubQHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardClubQHalf.png");
     else if (card.getRank() == 13)
-      return wxT("../resources/pictures/cards/cardClubKHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardClubKHalf.png");
     else // ace
-      return wxT("../resources/pictures/cards/cardClubAHalf.png");
+      return wxT("../../source/resources/pictures/cards/cardClubAHalf.png");
   } else // UNDEFINED
-    return wxT("../resources/pictures/cards/cardBackHalf.png");
+    return wxT("../../source/resources/pictures/cards/cardBackHalf.png");
 }
 
 wxString CrazyEightsScreen::findFullImage(Card &card, bool show) {
   if (!show)
-    return wxT("../resources/pictures/cards/cardBack.png");
+    return wxT("../../source/resources/pictures/cards/cardBack.png");
 
   if (card.getSuit() == Suit::HEARTS) {
     if (card.getRank() == 2)
-      return wxT("../resources/pictures/cards/cardHeart2.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart2.png");
     else if (card.getRank() == 3)
-      return wxT("../resources/pictures/cards/cardHeart3.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart3.png");
     else if (card.getRank() == 4)
-      return wxT("../resources/pictures/cards/cardHeart4.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart4.png");
     else if (card.getRank() == 5)
-      return wxT("../resources/pictures/cards/cardHeart5.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart5.png");
     else if (card.getRank() == 6)
-      return wxT("../resources/pictures/cards/cardHeart6.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart6.png");
     else if (card.getRank() == 7)
-      return wxT("../resources/pictures/cards/cardHeart7.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart7.png");
     else if (card.getRank() == 8)
-      return wxT("../resources/pictures/cards/cardHeart8.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart8.png");
     else if (card.getRank() == 9)
-      return wxT("../resources/pictures/cards/cardHeart9.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart9.png");
     else if (card.getRank() == 10)
-      return wxT("../resources/pictures/cards/cardHeart10.png");
+      return wxT("../../source/resources/pictures/cards/cardHeart10.png");
     else if (card.getRank() == 11)
-      return wxT("../resources/pictures/cards/cardHeartJ.png");
+      return wxT("../../source/resources/pictures/cards/cardHeartJ.png");
     else if (card.getRank() == 12)
-      return wxT("../resources/pictures/cards/cardHeartQ.png");
+      return wxT("../../source/resources/pictures/cards/cardHeartQ.png");
     else if (card.getRank() == 13)
-      return wxT("../resources/pictures/cards/cardHeartK.png");
+      return wxT("../../source/resources/pictures/cards/cardHeartK.png");
     else // ace
-      return wxT("../resources/pictures/cards/cardHeartA.png");
+      return wxT("../../source/resources/pictures/cards/cardHeartA.png");
   } else if (card.getSuit() == Suit::SPADES) {
     if (card.getRank() == 2)
-      return wxT("../resources/pictures/cards/cardSpade2.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade2.png");
     else if (card.getRank() == 3)
-      return wxT("../resources/pictures/cards/cardSpade3.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade3.png");
     else if (card.getRank() == 4)
-      return wxT("../resources/pictures/cards/cardSpade4.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade4.png");
     else if (card.getRank() == 5)
-      return wxT("../resources/pictures/cards/cardSpade5.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade5.png");
     else if (card.getRank() == 6)
-      return wxT("../resources/pictures/cards/cardSpade6.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade6.png");
     else if (card.getRank() == 7)
-      return wxT("../resources/pictures/cards/cardSpade7.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade7.png");
     else if (card.getRank() == 8)
-      return wxT("../resources/pictures/cards/cardSpade8.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade8.png");
     else if (card.getRank() == 9)
-      return wxT("../resources/pictures/cards/cardSpade9.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade9.png");
     else if (card.getRank() == 10)
-      return wxT("../resources/pictures/cards/cardSpade10.png");
+      return wxT("../../source/resources/pictures/cards/cardSpade10.png");
     else if (card.getRank() == 11)
-      return wxT("../resources/pictures/cards/cardSpadeJ.png");
+      return wxT("../../source/resources/pictures/cards/cardSpadeJ.png");
     else if (card.getRank() == 12)
-      return wxT("../resources/pictures/cards/cardSpadeQ.png");
+      return wxT("../../source/resources/pictures/cards/cardSpadeQ.png");
     else if (card.getRank() == 13)
-      return wxT("../resources/pictures/cards/cardSpadeK.png");
+      return wxT("../../source/resources/pictures/cards/cardSpadeK.png");
     else // ace
-      return wxT("../resources/pictures/cards/cardSpadeA.png");
+      return wxT("../../source/resources/pictures/cards/cardSpadeA.png");
   } else if (card.getSuit() == Suit::DIAMONDS) {
     if (card.getRank() == 2)
-      return wxT("../resources/pictures/cards/cardDiamond2.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond2.png");
     else if (card.getRank() == 3)
-      return wxT("../resources/pictures/cards/cardDiamond3.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond3.png");
     else if (card.getRank() == 4)
-      return wxT("../resources/pictures/cards/cardDiamond4.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond4.png");
     else if (card.getRank() == 5)
-      return wxT("../resources/pictures/cards/cardDiamond5.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond5.png");
     else if (card.getRank() == 6)
-      return wxT("../resources/pictures/cards/cardDiamond6.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond6.png");
     else if (card.getRank() == 7)
-      return wxT("../resources/pictures/cards/cardDiamond7.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond7.png");
     else if (card.getRank() == 8)
-      return wxT("../resources/pictures/cards/cardDiamond8.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond8.png");
     else if (card.getRank() == 9)
-      return wxT("../resources/pictures/cards/cardDiamond9.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond9.png");
     else if (card.getRank() == 10)
-      return wxT("../resources/pictures/cards/cardDiamond10.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamond10.png");
     else if (card.getRank() == 11)
-      return wxT("../resources/pictures/cards/cardDiamondJ.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamondJ.png");
     else if (card.getRank() == 12)
-      return wxT("../resources/pictures/cards/cardDiamondQ.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamondQ.png");
     else if (card.getRank() == 13)
-      return wxT("../resources/pictures/cards/cardDiamondK.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamondK.png");
     else // ace
-      return wxT("../resources/pictures/cards/cardDiamondA.png");
+      return wxT("../../source/resources/pictures/cards/cardDiamondA.png");
   } else if (card.getSuit() == Suit::CLUBS) {
     if (card.getRank() == 2)
-      return wxT("../resources/pictures/cards/cardClub2.png");
+      return wxT("../../source/resources/pictures/cards/cardClub2.png");
     else if (card.getRank() == 3)
-      return wxT("../resources/pictures/cards/cardClub3.png");
+      return wxT("../../source/resources/pictures/cards/cardClub3.png");
     else if (card.getRank() == 4)
-      return wxT("../resources/pictures/cards/cardClub4.png");
+      return wxT("../../source/resources/pictures/cards/cardClub4.png");
     else if (card.getRank() == 5)
-      return wxT("../resources/pictures/cards/cardClub5.png");
+      return wxT("../../source/resources/pictures/cards/cardClub5.png");
     else if (card.getRank() == 6)
-      return wxT("../resources/pictures/cards/cardClub6.png");
+      return wxT("../../source/resources/pictures/cards/cardClub6.png");
     else if (card.getRank() == 7)
-      return wxT("../resources/pictures/cards/cardClub7.png");
+      return wxT("../../source/resources/pictures/cards/cardClub7.png");
     else if (card.getRank() == 8)
-      return wxT("../resources/pictures/cards/cardClub8.png");
+      return wxT("../../source/resources/pictures/cards/cardClub8.png");
     else if (card.getRank() == 9)
-      return wxT("../resources/pictures/cards/cardClub9.png");
+      return wxT("../../source/resources/pictures/cards/cardClub9.png");
     else if (card.getRank() == 10)
-      return wxT("../resources/pictures/cards/cardClub10.png");
+      return wxT("../../source/resources/pictures/cards/cardClub10.png");
     else if (card.getRank() == 11)
-      return wxT("../resources/pictures/cards/cardClubJ.png");
+      return wxT("../../source/resources/pictures/cards/cardClubJ.png");
     else if (card.getRank() == 12)
-      return wxT("../resources/pictures/cards/cardClubQ.png");
+      return wxT("../../source/resources/pictures/cards/cardClubQ.png");
     else if (card.getRank() == 13)
-      return wxT("../resources/pictures/cards/cardClubK.png");
+      return wxT("../../source/resources/pictures/cards/cardClubK.png");
     else // ace
-      return wxT("../resources/pictures/cards/cardClubA.png");
+      return wxT("../../source/resources/pictures/cards/cardClubA.png");
   } else // UNDEFINED
-    return wxT("../resources/pictures/cards/cardBack.png");
+    return wxT("../../source/resources/pictures/cards/cardBack.png");
 }
 
 // resets the game
