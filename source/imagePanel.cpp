@@ -1,17 +1,6 @@
 #include "imagePanel.h"
 
 BEGIN_EVENT_TABLE(wxImagePanel, wxPanel)
-// some useful events
-/*
- EVT_MOTION(wxImagePanel::mouseMoved)
- EVT_LEFT_DOWN(wxImagePanel::mouseDown)
- EVT_LEFT_UP(wxImagePanel::mouseReleased)
- EVT_RIGHT_DOWN(wxImagePanel::rightClick)
- EVT_LEAVE_WINDOW(wxImagePanel::mouseLeftWindow)
- EVT_KEY_DOWN(wxImagePanel::keyPressed)
- EVT_KEY_UP(wxImagePanel::keyReleased)
- EVT_MOUSEWHEEL(wxImagePanel::mouseWheelMoved)
- */
 
 // catch paint events
 EVT_PAINT(wxImagePanel::paintEvent)
@@ -21,27 +10,16 @@ EVT_SIZE(wxImagePanel::OnSize)
 EVT_LEFT_UP(wxImagePanel::mouseReleased)
 END_EVENT_TABLE()
 
-// some useful events
-/*
- void wxImagePanel::mouseMoved(wxMouseEvent& event) {}
- void wxImagePanel::mouseDown(wxMouseEvent& event) {}
- void wxImagePanel::mouseWheelMoved(wxMouseEvent& event) {}
- void wxImagePanel::mouseReleased(wxMouseEvent& event) {}
- void wxImagePanel::rightClick(wxMouseEvent& event) {}
- void wxImagePanel::mouseLeftWindow(wxMouseEvent& event) {}
- void wxImagePanel::keyPressed(wxKeyEvent& event) {}
- void wxImagePanel::keyReleased(wxKeyEvent& event) {}
- */
 
 wxImagePanel::wxImagePanel(wxPanel *parent, wxString file, wxBitmapType format,
                            Direction dir, int width, int height)
     : wxPanel(parent) {
-  // load the file... ideally add a check to see if loading was successful
+//  load the file... ideally add a check to see if loading was successful
   image.LoadFile(file, format);
 
   switch (dir) {
   case UP:
-    // don't rotate
+    //don't rotate
     this->SetMinSize(wxSize(width, height));
     this->SetMaxSize(wxSize(width, height));
     break;
@@ -57,7 +35,7 @@ wxImagePanel::wxImagePanel(wxPanel *parent, wxString file, wxBitmapType format,
     this->SetMaxSize(wxSize(height, width));
     break;
   case RIGHT:
-    // clockwise
+   //  clockwise
     image = image.Rotate90(true);
     this->SetMinSize(wxSize(height, width));
     this->SetMaxSize(wxSize(height, width));
